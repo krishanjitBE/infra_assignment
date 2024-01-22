@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CRUD App</title>
+</head>
+<body>
+    <h1>Items</h1>
+    <ul>
+        <% items.forEach(item => { %>
+            <li><a href="/update/<%= item.id %>"><%= item.name %></a> - <a href="/delete/<%= item.id %>">Delete</a></li>
+        <% }) %>
+    </ul>
+    <a href="/create">Create New Item</a>
+</body>
+</html>
